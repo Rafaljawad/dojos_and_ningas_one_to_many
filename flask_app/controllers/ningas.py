@@ -11,7 +11,7 @@ def ninga_form():
 
 @app.route('/create/ninga',methods=['POST'])
 def create_ninga():
-#     I can either write data and rwquest things from form or just pass the data to method by usinf request.form
+#     I can either write data and request things from form or just pass the data to method by using request.form
 #   1-first way as a refrence  
 #  # data={
     #     'dojo_id':request.form['dojo_id'],
