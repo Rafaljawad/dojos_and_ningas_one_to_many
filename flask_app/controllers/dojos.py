@@ -8,7 +8,7 @@ from flask_app.models import ninga
 def index():
     return render_template('new_dojo.html',all_dojos=dojo.Dojo.get_all_dojos())
 
-#this route for create new dojo and the data coming from filling the form in new_dojo.html
+#this route for creating new dojo and the data coming from filling the form in new_dojo.html
 @app.route('/create/dojo',methods=['POST'])
 def create_dojo():
     data={
