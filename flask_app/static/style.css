@@ -1,0 +1,27 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    padding:40px;
+    margin:100px auto 10px auto;
+    background-color: rgb(114, 192, 153);
+    width:800px;
+    display: flex;
+    justify-content: space-around;
+    
+}
+.main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+.ninga_container{
+    padding:40px;
+    margin:100px auto 10px auto;
+    background-color: rgb(114, 192, 153);
+    width:70%;
+}

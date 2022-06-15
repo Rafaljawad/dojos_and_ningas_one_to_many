@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="ninga_container">
+    <h1>{{single_dojo.name}} Dojo</h1>
+    <h2>Our Ningas are:</h2>
+    <table>
+        <thead>
+            <td>First_name</td>
+            <td>Last_name</td>
+            <td>Age</td>
+        </thead>
+        <tbody>
+            {% for fav in single_dojo.ningas %}
+            <tr>
+                <td>{{fav.first_name}}</td>
+                <td>{{fav.last_name}}</td>
+                <td>{{fav.age}}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <a href="/dojos">Home</a>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="ninga_container">
+    <h1>New ninga</h1>
+    <form action="/create/ninga" method="post">
+        <label for="dojo">Dojo</label>
+        <select name="dojo_id" >
+            {% for d in dojos %} 
+            <option value="{{d.id}}">{{d.name}}</option>
+            {% endfor %}
+        </select>
+        <label for="fName">First_Name</label>
+        <input type="text" name="first_name" >
+        <label for="lName">Last_Name</label>
+        <input type="text" name="last_name" >
+        <label for="age">Age</label>
+        <input type="text" name="age" >
+        <input type="submit" value="Add">
+    </form>
+    <a href="/dojos">Home</a>
+</div>
+</body>
+</html>
